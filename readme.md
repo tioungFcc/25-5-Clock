@@ -1,0 +1,1 @@
+That was really challenging. Spent a lot of time to (1) implement the mins and secs part (2) get the timer right i.e. setInterval worked when using React hooks useRef but not otherwise. Still have to figure out why!!!
