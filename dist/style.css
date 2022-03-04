@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root {
+  height: 100vh;
+}
+
+#root .header {
+  font-size: 2.7rem;
+  font-weight: 600;
+}
+
+#root .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#root .controls > * {
+  margin: 0.5em;
+  font-size: 1.2rem;
+}
+
+#root .controls > * #break-label,
+#root .controls > * #session-label {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+#root .controls > * .arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#root .controls > * .arrows .fas {
+  margin: 0 0.2em;
+  cursor: pointer;
+}
+
+#root .clock .timer {
+  border: 1px solid black;
+  padding: 0.5em;
+  border-radius: 20px;
+}
+
+#root .clock .timer .timer-top {
+  background: darkslategray;
+  color: white;
+  width: 200px;
+  height: 150px;
+  border-radius: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#root .clock .timer .timer-top #timer-label {
+  font-size: 2.5rem;
+}
+
+#root .clock .timer .timer-top #time-left {
+  font-size: 3rem;
+}
+
+#root .clock .timer .timer-bottom {
+  margin-top: 0.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#root .clock .timer .timer-bottom #start_stop,
+#root .clock .timer .timer-bottom #reset {
+  background: white;
+  border: 1px solid darkslategray;
+  border-radius: 6px;
+  color: darkslategray;
+  font-weight: 600;
+  padding: 0.2em 0.4em;
+  margin: 0 0.2em;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,71 @@
+#root {
+  height: 100vh;
+  .header {
+    font-size: 2.7rem;
+    font-weight: 600;
+  }
+  .controls {
+    //background: red;
+    display: flex;
+
+    > * {
+      margin: 0.5em;
+      font-size: 1.2rem;
+
+      #break-label,
+      #session-label {
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+
+      .arrows {
+        display: flex;
+
+        .fas {
+          margin: 0 0.2em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .clock {
+    .timer {
+      border: 1px solid black;
+      padding: 0.5em;
+      border-radius: 20px;
+
+      .timer-top {
+        background: darkslategray;
+        color: white;
+        width: 200px;
+        height: 150px;
+        border-radius: 20px;
+        flex-direction: column;
+
+        #timer-label {
+          font-size: 2.5rem;
+        }
+        #time-left {
+          font-size: 3rem;
+        }
+      }
+
+      .timer-bottom {
+        margin-top: 0.3em;
+        display: flex;
+        justify-content: center;
+
+        #start_stop,
+        #reset {
+          background: white;
+          border: 1px solid darkslategray;
+          border-radius: 6px;
+          color: darkslategray;
+          font-weight: 600;
+          padding: 0.2em 0.4em;
+          margin: 0 0.2em;
+        }
+      }
+    }
+  }
+}
