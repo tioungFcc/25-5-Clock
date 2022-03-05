@@ -30,7 +30,7 @@ function Controls({breakTime, setBreakTime, sessionTime, setSessionTime}){
 }
 function Timer({breakTime, setBreakTime, sessionTime, setSessionTime}){
     const [thisTime, setThisTime] = React.useState(sessionTime)
-    let intervalRef = React.useRef(null)
+    const [timeInt, setTimeInt] = React.useState(null)
     const [session, setSession] = React.useState(true)
     React.useEffect(()=>{
         setThisTime(sessionTime)
@@ -38,22 +38,21 @@ function Timer({breakTime, setBreakTime, sessionTime, setSessionTime}){
     function handleClick(e){
         const id=e.target.id
         if(id=="start_stop"){
-            if(intervalRef.current){
-                if(intervalRef.current==null)return
-                clearInterval(intervalRef.current)
-                intervalRef.current=null
+            if(timeInt){
+                clearInterval(timeInt)
+                setTimeInt(null)
                 return
             }
-            intervalRef.current=setInterval(()=>{
+            setTimeInt(setInterval(()=>{
                 setThisTime(time=>{
                     if(time>0)return time-1
                     return -1
                 }) 
-            },1000)
+            },1000))
         }else if(id=="reset"){
             setThisTime(sessionTime)
-            clearInterval(intervalRef.current)
-            intervalRef.current=null
+            clearInterval(timeInt)
+            setTimeInt(null)
             setSession(true)
             setBreakTime(5*60)
             setSessionTime(25*60)
