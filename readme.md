@@ -2,7 +2,7 @@ That was really challenging. Spent a lot of time to (1) implement the mins and s
 
 # Sat, 5 March 2022
 
-## my bad! prob;em was not that setInterval worke only when using useRef
+## my bad! problem was not that setInterval worked only when using useRef
 
 ### problem was I used this:
 
